@@ -1,0 +1,26 @@
+@model IEnumerable<l06_sql.Models.Coffee>
+
+@{
+    ViewData["Title"] = "Coffee Menu";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Menu</h1>
+    @foreach (var coffee in Model)
+    {
+        <h2>@coffee.Name - $@coffee.Price</h2>
+        <p>@coffee.Description</p>
+        <a class="btn btn-sm btn-secondary mb-3"
+            asp-controller="Coffee" asp-action="Detail" asp-route-id="@coffee.CoffeeId" >
+            View / Edit Coffee
+        </a>
+        <a class="btn btn-sm btn-danger mb-3 ml-3"
+            asp-controller="Coffee" asp-action="Delete" asp-route-id="@coffee.CoffeeId">
+            Delete Coffee
+        </a>
+    }
+
+    <div>
+        <a class="btn btn-primary mt-3 clearfix" asp-controller="Coffee" asp-action="New">Create New</a>
+    </div>
+</div>

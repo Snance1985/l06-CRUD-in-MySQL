@@ -1,0 +1,15 @@
+@model l06_sql.Models.Coffee
+
+@{
+    ViewData["Title"] = "Coffee";
+}
+
+<form asp-controller="Coffee" asp-action="Detail" method="post">
+    <h1 class="display-4 text-center mb-5">Delicious Coffee Details</h1>
+
+    @Html.Partial("_CoffeeInput", Model)
+
+    <input type="hidden" asp-for="CoffeeId" />
+    <input type="submit" class="btn btn-sm btn-primary float-end" value="Save">
+</form>
+<a class="btn btn-sm btn-light" asp-controller="Coffee" asp-action="List">Back</a>

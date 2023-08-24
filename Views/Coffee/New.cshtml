@@ -1,0 +1,15 @@
+@model l06_sql.Models.Coffee
+
+@{
+    ViewData["Title"] = "New Coffee";
+}
+
+<form asp-controller="Coffee" asp-action="New" method="post">
+    <h1 class="display-4 text-center mb-5">Create New Coffee</h1>
+
+    @await Html.PartialAsync("_CoffeeInput", Model)
+
+    <input type="submit" class="btn btn-sm btn-primary float-end" value="Save">
+</form>
+
+<a class="btn btn-sm btn-light" asp-controller="Coffee" asp-action="List">Back</a>

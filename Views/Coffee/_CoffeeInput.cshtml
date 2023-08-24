@@ -1,0 +1,27 @@
+@model l06_sql.Models.Coffee
+
+<div class="form-group">
+    <div class="row m-3 input-group">
+        <label class="control-label col-md-3 offset-md-1" asp-for="Name">Name: </label>
+        <input class="form-control col-md-7" asp-for="Name" />
+        <div class="col-12 text-danger text-end">
+            <span asp-validation-for="Name"></span>
+        </div>
+    </div>
+
+    <div class="row m-3 input-group">
+        <label class="control-label col-md-3 offset-md-1" asp-for="Description">Description: </label>
+        <textarea class="form-control col-md-7" asp-for="Description"></textarea>
+        <div class="col-12 text-danger text-end">
+            <span asp-validation-for="Description"></span>
+        </div>
+    </div>
+
+    <div class="row m-3 input-group">
+        <label class="control-label col-md-3 offset-md-1" asp-for="Price">Price: </label>
+        <input class="form-control col-md-7" asp-for="Price" />
+        <div class="col-12 text-danger text-end">
+            <span asp-validation-for="Price"></span>
+        </div>
+    </div>
+</div>
